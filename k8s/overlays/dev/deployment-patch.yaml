@@ -1,0 +1,13 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hello-k8s
+spec:
+  replicas: 1
+  template:
+    spec:
+      containers:
+      - name: hello-k8s
+        env:
+        - name: APP_MESSAGE
+          value: Hello from the dev environment via Argo CD
